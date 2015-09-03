@@ -4,14 +4,14 @@ A symfony project utilizing Docker based on PHP-FPM and nginx.
 
 ## Running
 
-You can run the Docker environment using [fig](http://www.fig.sh/):
+You can run the Docker environment using [docker-compose](https://docs.docker.com/compose/):
 
-    $ fig up -d
+    $ docker-compose up -d
 
 You can run one-shot command inside the `symfony` service container:
 
-    $ fig run --rm symfony composer install
-    $ fig run --rm symfony php app/console cache:clear
+    $ docker-compose run symfony composer install
+    $ docker-compose run symfony php app/console cache:clear
 
 ## Example Application
 
@@ -21,4 +21,4 @@ During the startup of the `fpm` service some fixture data will be generated for
 you automatically. If you want to add your own entries you can use the console
 command shipped with the example application:
 
-    $fig run --rm symfony php app/console giantswarm:temperature:add cologne 30
+    $ docker-compose run symfony php app/console giantswarm:temperature:add cologne 30
