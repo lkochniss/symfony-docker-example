@@ -26,4 +26,4 @@ fpm:
     APP_SERVER_NAME: dev-machine
 
 redis:
-  image: redis:2.8.13
+  image: redis:latest
