@@ -27,3 +27,5 @@ fpm:
 
 redis:
   image: redis:latest
+  ports:
+    - 6379
